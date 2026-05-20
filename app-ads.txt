@@ -1,0 +1,14 @@
+# StreetCat Creative — app-ads.txt
+#
+# AdMob (and other ad networks) will look for THIS file at the root of the
+# domain you list as your app's developer URL in App Store Connect. Without
+# it, certain advertisers refuse to bid on your inventory, which caps the
+# CPM you can earn.
+#
+# REPLACE this comment block with the exact line AdMob shows you in:
+#   AdMob console -> Apps -> Tiki-Tapa -> App settings -> app-ads.txt
+#
+# The line looks like:
+#   google.com, pub-3883850593023808, DIRECT, f08c47fec0942fa0
+#
+# Then commit + push and AdMob will pick it up within ~24 hours.
