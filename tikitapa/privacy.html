@@ -51,6 +51,10 @@
     <ul>
       <li>Username (lowercase handle), display name, favorite team. You can change or clear these at any
         time in the Account screen.</li>
+      <li><strong>Optional details:</strong> full name, contact email, and age, if you choose to enter
+        them on the profile screen. All three are optional — you can skip them, and you can clear them
+        later from the Account screen. We use them only to personalise your profile and to understand
+        our audience in aggregate; we do not email you, and we never share them with advertisers.</li>
     </ul>
 
     <h3>1.3 Gameplay data</h3>
@@ -93,6 +97,24 @@
         stop us from receiving it.</li>
     </ul>
 
+    <h3>1.8 Analytics and measurement</h3>
+    <ul>
+      <li><strong>Usage events.</strong> We record in-app actions such as screens viewed, matches
+        started and finished, levels reached, badges unlocked, shop visits, and purchase attempts. We
+        use these to understand which parts of the game people enjoy and where they get stuck.</li>
+      <li><strong>Analytics identifier.</strong> When you are signed in, we associate your analytics
+        activity with your account ID so we can understand how features are used across sessions and
+        devices. This identifier is internal to our analytics and is not shared with advertisers.</li>
+      <li><strong>Advertising performance data.</strong> When an ad is shown, we record the estimated
+        revenue of that impression, the ad format, and which placement it appeared in. This tells us
+        which parts of the App sustain the free version. It is not tied to the content of any ad you
+        saw.</li>
+      <li><strong>Aggregate characteristics.</strong> We store coarse groupings — such as an age range
+        like "25-34" rather than your exact age, an experience level range, and whether you have made a
+        purchase — so we can understand our audience as groups rather than individuals.
+        <strong>Your age range is never shared with advertising networks.</strong></li>
+    </ul>
+
     <p>
       We do <strong>not</strong> collect: phone number, precise location, address book contacts,
       photos, microphone, camera, health data, or financial details. Name and email from Sign in
@@ -115,6 +137,10 @@
         <tr><td>Push notification token</td><td>Deliver match-invite pushes via Apple Push Notification Service</td></tr>
         <tr><td>IDFA (consented only)</td><td>Show more relevant ads via Google AdMob</td></tr>
         <tr><td>IAP receipts</td><td>Unlock the content you bought; restore purchases on a new device</td></tr>
+        <tr><td>Usage events</td><td>Understand which features are used and where players get stuck</td></tr>
+        <tr><td>Analytics identifier</td><td>Connect your activity across sessions so the above is accurate per player rather than per launch</td></tr>
+        <tr><td>Ad performance data</td><td>Measure whether the free, ad-supported version is sustainable</td></tr>
+        <tr><td>Age range and other aggregate groupings</td><td>Understand our audience as groups; never used to target ads</td></tr>
       </tbody>
     </table>
 
@@ -124,14 +150,23 @@
       and only to operate the App:
     </p>
     <ul>
-      <li><strong>Google Firebase</strong> (Authentication, Realtime Database). Stores your profile,
-        friends list, match history, and multiplayer room state.
+      <li><strong>Google Firebase</strong> (Authentication, Realtime Database, Analytics, Cloud
+        Messaging, Remote Config). Stores your profile, friends list, match history, and multiplayer
+        room state; records the usage events described in §1.8; delivers push notifications; and lets
+        us adjust in-app settings without shipping an update.
         <a href="https://policies.google.com/privacy" rel="noopener">Google's privacy policy</a>.</li>
       <li><strong>Google AdMob</strong> (advertising). Receives the IDFA only if you allowed tracking;
         otherwise receives no identifier. Used to show banner, interstitial, and rewarded ads.
         <a href="https://support.google.com/admob/answer/6128543" rel="noopener">AdMob &amp; data</a>.</li>
       <li><strong>Google User Messaging Platform</strong> (consent management for GDPR users). Records
         your ad-consent choices.</li>
+      <li><strong>Meta (Facebook)</strong> (app-install measurement). Receives a limited set of
+        milestone events — for example that a registration, a first completed match, a level-up, or a
+        purchase occurred, and the purchase amount — so we can tell which advertising campaigns bring
+        in players who enjoy the game. If you did not allow tracking, Meta receives these only in
+        aggregated, non-identifying form via Apple's SKAdNetwork. <strong>We never send Meta your age,
+        your profile details, or your match history.</strong>
+        <a href="https://www.facebook.com/privacy/policy" rel="noopener">Meta's privacy policy</a>.</li>
       <li><strong>Apple</strong> (Sign in with Apple, App Store, StoreKit, App Tracking Transparency).
         Processes authentication and purchases; you interact with Apple directly.
         <a href="https://www.apple.com/legal/privacy/" rel="noopener">Apple's privacy policy</a>.</li>
