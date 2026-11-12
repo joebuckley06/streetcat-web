@@ -10,6 +10,8 @@ Vanilla HTML/CSS, no framework, no build step. Edit files, push, GitHub Pages se
 /                       index.html       — LLC landing
 /tikitapa/              index.html       — Tiki-Tapa app page
 /tikitapa/privacy.html  — Tiki-Tapa privacy policy
+/mondayminute/             index.html       — Monday Minute "get the app" page (unlisted, noindex)
+/mondayminute/privacy.html — Monday Minute privacy policy
 /app-ads.txt            — AdMob authorization (REPLACE before launch — see below)
 /styles.css             — shared CSS
 /404.html               — GitHub Pages fallback for unmatched URLs

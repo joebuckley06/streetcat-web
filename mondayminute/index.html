@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Get Monday Minute</title>
+  <meta name="description" content="Install the Monday Minute beta and join your friends' group.">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#0e1a14">
+  <link rel="stylesheet" href="/styles.css">
+  <style>
+    .get { display: inline-block; margin: 4px 0 16px; padding: 12px 20px; border-radius: 10px; border: 1px solid var(--text-dim); font-weight: 700; }
+    .yours { display: none; font-size: 12px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; color: var(--text-dim); margin: 0 0 8px; }
+    .mine .yours { display: block; }
+    .other h2 { opacity: 0.7; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1 class="brand">Monday Minute</h1>
+      <p class="tagline">Weekly voice notes with your friends · Beta</p>
+    </header>
+
+    <section class="section">
+      <p class="lede">
+        A friend invited you to their group. Install the beta, then join with the code from their message.
+      </p>
+    </section>
+
+    <div id="platforms">
+      <section class="section" id="ios">
+        <p class="yours">Your phone</p>
+        <h2>iPhone</h2>
+        <div class="card">
+          <a class="get" href="https://testflight.apple.com/join/hXgzKq9a">Get the iPhone beta</a>
+          <ol>
+            <li>If you don't have it yet, install <a href="https://apps.apple.com/app/testflight/id899247664">TestFlight</a> from the App Store.</li>
+            <li>Open <a href="https://testflight.apple.com/join/hXgzKq9a">the Monday Minute beta</a> on your iPhone, tap <strong>Accept</strong>, then <strong>Install</strong>.</li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="section" id="android">
+        <p class="yours">Your phone</p>
+        <h2>Android</h2>
+        <div class="card">
+          <a class="get" href="https://play.google.com/apps/internaltest/4700997237294672871">Get the Android beta</a>
+          <ol>
+            <li>First, send your friend the Gmail address you use for Google Play, so they can add you to the beta. The link won't work until they have.</li>
+            <li>On your phone, signed in with that Google account, open <a href="https://play.google.com/apps/internaltest/4700997237294672871">the Monday Minute beta</a>, tap <strong>Become a tester</strong>, then install it from Google Play.</li>
+            <li>Google Play may show the name "com.joebuckley.mondayminute (unreviewed)" while the beta is new. That's us. Once installed it's called Monday Minute.</li>
+          </ol>
+        </div>
+      </section>
+    </div>
+
+    <section class="section">
+      <h2>Then</h2>
+      <p>Open Monday Minute, sign in, tap <strong>Join with a code</strong> and enter the code from your invite.</p>
+    </section>
+
+    <footer class="footer">
+      © 2026 StreetCat Creative LLC ·
+      <a href="/mondayminute/privacy.html">Privacy</a> ·
+      <a href="mailto:contact@streetcatcreative.org">Contact</a>
+    </footer>
+  </div>
+  <script>
+    (function () {
+      var ua = navigator.userAgent || '';
+      var isIOS = /iPhone|iPad|iPod/.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+      var isAndroid = /Android/.test(ua);
+      if (!isIOS && !isAndroid) return;
+      var mine = document.getElementById(isIOS ? 'ios' : 'android');
+      var other = document.getElementById(isIOS ? 'android' : 'ios');
+      mine.classList.add('mine');
+      other.classList.add('other');
+      other.querySelector('h2').textContent += ' (on a different phone?)';
+      mine.parentNode.insertBefore(mine, mine.parentNode.firstChild);
+    })();
+  </script>
+</body>
+</html>
